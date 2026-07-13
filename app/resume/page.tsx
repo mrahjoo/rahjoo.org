@@ -1,5 +1,5 @@
 import { genPageMetadata } from 'app/seo'
-import { employment, education, funding } from '@/data/resumeData'
+import { employment, education, funding, organizations, languages } from '@/data/resumeData'
 
 export const metadata = genPageMetadata({ title: 'Resume' })
 
@@ -48,6 +48,27 @@ export default function Resume() {
                 {item.dates && <p className="text-sm text-gray-500 mt-1 !mb-2">{item.dates} | {item.location}</p>}
                 {!item.dates && <p className="text-sm text-gray-500 mt-1 !mb-2">{item.location}</p>}
                 {item.description && <p>{item.description}</p>}
+              </div>
+            ))}
+          </div>
+
+          <h2>Organizations</h2>
+          <div className="space-y-6">
+            {organizations.map((item, index) => (
+              <div key={index}>
+                <h3 className="!mb-0">{item.org}</h3>
+                <p className="font-semibold">{item.role}</p>
+                <p className="text-sm text-gray-500 mt-1 !mb-2">{item.dates}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2>Languages</h2>
+          <div className="space-y-6">
+            {languages.map((item, index) => (
+              <div key={index}>
+                <h3 className="!mb-0">{item.language}</h3>
+                <p className="text-sm text-gray-500 mt-1 !mb-2">{item.proficiency}</p>
               </div>
             ))}
           </div>

@@ -81,3 +81,36 @@ export const funding: ResumeItem[] = [
     description: 'PhD predoctoral research grant (Spain)',
   },
 ]
+
+export const organizations = [
+  {
+    org: 'International Solar Energy Society (ISES)',
+    role: 'Board of Directors Candidate – Member at Large',
+    dates: 'May 2026 – Present',
+  },
+  {
+    org: 'RILEM',
+    role: 'International Union of Laboratories and Experts in Construction Materials, Systems and Structures',
+    dates: 'Aug 2021 – Present',
+  },
+  {
+    org: 'ASHRAE',
+    role: 'The American Society of Heating, Refrigerating and Air-Conditioning Engineers',
+    dates: 'Jan 2018 – Present',
+  },
+]
+
+export const languages = [
+  {
+    language: 'English',
+    proficiency: 'Full professional proficiency',
+  },
+  {
+    language: 'Persian',
+    proficiency: 'Native or bilingual proficiency',
+  },
+  {
+    language: 'Spanish',
+    proficiency: 'Full professional proficiency',
+  },
+]
