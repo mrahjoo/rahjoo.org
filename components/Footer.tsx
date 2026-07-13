@@ -12,27 +12,52 @@ export default function Footer() {
           <SocialIcon kind="github" href={siteMetadata.github} size={6} />
           <SocialIcon kind="x" href={siteMetadata.x} size={6} />
           {siteMetadata.scholar && (
-            <a href={siteMetadata.scholar} target="_blank" rel="noreferrer" className="text-sm text-gray-500 transition hover:text-gray-600">
+            <a
+              href={siteMetadata.scholar}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-gray-500 transition hover:text-gray-600"
+            >
               Scholar
             </a>
           )}
           {siteMetadata.researchgate && (
-            <a href={siteMetadata.researchgate} target="_blank" rel="noreferrer" className="text-sm text-gray-500 transition hover:text-gray-600">
+            <a
+              href={siteMetadata.researchgate}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-gray-500 transition hover:text-gray-600"
+            >
               ResearchGate
             </a>
           )}
           {siteMetadata.orcid && (
-            <a href={siteMetadata.orcid} target="_blank" rel="noreferrer" className="text-sm text-gray-500 transition hover:text-gray-600">
+            <a
+              href={siteMetadata.orcid}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-gray-500 transition hover:text-gray-600"
+            >
               ORCID
             </a>
           )}
           {siteMetadata.scopus && (
-            <a href={siteMetadata.scopus} target="_blank" rel="noreferrer" className="text-sm text-gray-500 transition hover:text-gray-600">
+            <a
+              href={siteMetadata.scopus}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-gray-500 transition hover:text-gray-600"
+            >
               Scopus
             </a>
           )}
           {siteMetadata.sciprofiles && (
-            <a href={siteMetadata.sciprofiles} target="_blank" rel="noreferrer" className="text-sm text-gray-500 transition hover:text-gray-600">
+            <a
+              href={siteMetadata.sciprofiles}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-gray-500 transition hover:text-gray-600"
+            >
               SciProfiles
             </a>
           )}

@@ -20,8 +20,19 @@ export default function Resume() {
           <div className="space-y-6">
             {employment.map((item, index) => (
               <div key={index}>
-                <h3 className="!mb-0">{item.title} @ {item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.org}</a> : item.org}</h3>
-                <p className="text-sm text-gray-500 mt-1 !mb-2">{item.dates} | {item.location}</p>
+                <h3 className="!mb-0">
+                  {item.title} @{' '}
+                  {item.url ? (
+                    <a href={item.url} target="_blank" rel="noreferrer">
+                      {item.org}
+                    </a>
+                  ) : (
+                    item.org
+                  )}
+                </h3>
+                <p className="mt-1 !mb-2 text-sm text-gray-500">
+                  {item.dates} | {item.location}
+                </p>
                 {item.description && <p>{item.description}</p>}
               </div>
             ))}
@@ -32,8 +43,18 @@ export default function Resume() {
             {education.map((item, index) => (
               <div key={index}>
                 <h3 className="!mb-0">{item.title}</h3>
-                <p className="font-semibold">{item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.org}</a> : item.org}</p>
-                <p className="text-sm text-gray-500 mt-1 !mb-2">{item.dates} | {item.location}</p>
+                <p className="font-semibold">
+                  {item.url ? (
+                    <a href={item.url} target="_blank" rel="noreferrer">
+                      {item.org}
+                    </a>
+                  ) : (
+                    item.org
+                  )}
+                </p>
+                <p className="mt-1 !mb-2 text-sm text-gray-500">
+                  {item.dates} | {item.location}
+                </p>
                 {item.description && <p>{item.description}</p>}
               </div>
             ))}
@@ -44,9 +65,21 @@ export default function Resume() {
             {funding.map((item, index) => (
               <div key={index}>
                 <h3 className="!mb-0">{item.title}</h3>
-                <p className="font-semibold">{item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.org}</a> : item.org}</p>
-                {item.dates && <p className="text-sm text-gray-500 mt-1 !mb-2">{item.dates} | {item.location}</p>}
-                {!item.dates && <p className="text-sm text-gray-500 mt-1 !mb-2">{item.location}</p>}
+                <p className="font-semibold">
+                  {item.url ? (
+                    <a href={item.url} target="_blank" rel="noreferrer">
+                      {item.org}
+                    </a>
+                  ) : (
+                    item.org
+                  )}
+                </p>
+                {item.dates && (
+                  <p className="mt-1 !mb-2 text-sm text-gray-500">
+                    {item.dates} | {item.location}
+                  </p>
+                )}
+                {!item.dates && <p className="mt-1 !mb-2 text-sm text-gray-500">{item.location}</p>}
                 {item.description && <p>{item.description}</p>}
               </div>
             ))}
@@ -58,7 +91,7 @@ export default function Resume() {
               <div key={index}>
                 <h3 className="!mb-0">{item.org}</h3>
                 <p className="font-semibold">{item.role}</p>
-                <p className="text-sm text-gray-500 mt-1 !mb-2">{item.dates}</p>
+                <p className="mt-1 !mb-2 text-sm text-gray-500">{item.dates}</p>
               </div>
             ))}
           </div>
@@ -68,7 +101,7 @@ export default function Resume() {
             {languages.map((item, index) => (
               <div key={index}>
                 <h3 className="!mb-0">{item.language}</h3>
-                <p className="text-sm text-gray-500 mt-1 !mb-2">{item.proficiency}</p>
+                <p className="mt-1 !mb-2 text-sm text-gray-500">{item.proficiency}</p>
               </div>
             ))}
           </div>
