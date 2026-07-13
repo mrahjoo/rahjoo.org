@@ -1,4 +1,5 @@
 import { genPageMetadata } from 'app/seo'
+import { employment, education, funding } from '@/data/resumeData'
 
 export const metadata = genPageMetadata({ title: 'Resume' })
 
@@ -11,30 +12,45 @@ export default function Resume() {
             Resume
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            My professional experience and skills.
+            My professional experience, education, and funding.
           </p>
         </div>
         <div className="prose dark:prose-invert container max-w-none py-12">
           <h2>Experience</h2>
-          <h3>Developer @ ProExergy</h3>
-          <p className="text-sm text-gray-500">2023 - Present</p>
-          <ul>
-            <li>Developed and maintained web applications and APIs.</li>
-            <li>Collaborated with cross-functional teams to deliver high-quality software.</li>
-          </ul>
+          <div className="space-y-6">
+            {employment.map((item, index) => (
+              <div key={index}>
+                <h3 className="!mb-0">{item.title} @ {item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.org}</a> : item.org}</h3>
+                <p className="text-sm text-gray-500 mt-1 !mb-2">{item.dates} | {item.location}</p>
+                {item.description && <p>{item.description}</p>}
+              </div>
+            ))}
+          </div>
 
           <h2>Education</h2>
-          <h3>University Degree</h3>
-          <p className="text-sm text-gray-500">Graduated Year</p>
-          <ul>
-            <li>Degree Details</li>
-          </ul>
+          <div className="space-y-6">
+            {education.map((item, index) => (
+              <div key={index}>
+                <h3 className="!mb-0">{item.title}</h3>
+                <p className="font-semibold">{item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.org}</a> : item.org}</p>
+                <p className="text-sm text-gray-500 mt-1 !mb-2">{item.dates} | {item.location}</p>
+                {item.description && <p>{item.description}</p>}
+              </div>
+            ))}
+          </div>
 
-          <h2>Skills</h2>
-          <ul>
-            <li>JavaScript, TypeScript, React, Next.js</li>
-            <li>Node.js, AWS, Cloudflare, CI/CD</li>
-          </ul>
+          <h2>Funding & Grants</h2>
+          <div className="space-y-6">
+            {funding.map((item, index) => (
+              <div key={index}>
+                <h3 className="!mb-0">{item.title}</h3>
+                <p className="font-semibold">{item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.org}</a> : item.org}</p>
+                {item.dates && <p className="text-sm text-gray-500 mt-1 !mb-2">{item.dates} | {item.location}</p>}
+                {!item.dates && <p className="text-sm text-gray-500 mt-1 !mb-2">{item.location}</p>}
+                {item.description && <p>{item.description}</p>}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

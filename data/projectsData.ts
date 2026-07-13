@@ -7,20 +7,30 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'ProExergy Tech Solutions',
+    description: `Building AI-powered HVAC and building energy APIs for equipment sizing, exergy analysis, and energy calculations. See more at proexergy.com and hvac-eng.com.`,
+    imgSrc: '/static/images/time-machine.jpg',
+    href: 'https://proexergy.com',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Unit Engineering',
+    description: `Engineering resources and tools.`,
+    href: 'https://unit-eng.com',
+  },
+  {
+    title: 'Chart Engineering',
+    description: `Data visualization and charting tools.`,
+    href: 'https://chart-eng.com',
+  },
+  {
+    title: 'MEP Kit',
+    description: `Mechanical, electrical, and plumbing engineering kit.`,
+    href: 'https://mepkit.com',
+  },
+  {
+    title: 'OBTES',
+    description: `Optimization and analysis tools.`,
+    href: 'https://obtes.com',
   },
 ]
 
